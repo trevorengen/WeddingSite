@@ -1,0 +1,20 @@
+* {
+  color: #494949;
+}
+
+.green-hover {
+  text-decoration: none;
+  color: black;
+}
+
+.green-hover:hover {
+  color: #5e6c44;
+}
+
+.custom-button {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 170px
+}

@@ -1,0 +1,57 @@
+@model Wedding_Site.Models.Guest
+<div class="row d-flex flex-column justify-content-center align-items-center mt-5">
+    <div class="row justify-content-center mt-4 py-3 mb-3">
+        <div class="col-8">
+            <div class="row row-cols-2 justify-content-center">
+                <img src="~/imgs/New_Graphic.svg" class="col-12 col-lg-5">
+
+                <form class="col-12 col-lg-5 my-auto" asp-action="UsrRsvp">
+                    <div class="row d-flex justify-content-evenly my-2">
+                        <div class="col-12 col-md-6 pt-2">
+                            <input asp-for="FirstName" class="form-control" placeholder="First Name">
+                        </div>
+                        
+                        <div class="col-12 col-md-6 pt-2">
+                            <input asp-for="LastName" class="form-control" placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-between my-2">
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input asp-for="HouseHold" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I'm RSVPing for my household.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-center mt-2">
+                        <div class="col">
+                            <input asp-for="Email" class="form-control" placeholder="Email (Optional)">
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mx-auto mb-1">
+                            <span class="text-muted" style="font-size: 8px;">Email will only be used in case of updates and a friendly reminder!</span>
+                    </div>
+
+                    <div class="row d-flex justify-content-center my-2">
+                        <div class="col">
+                            <textarea asp-for="Message" class="form-control" placeholder="Message to Jane & Trevor (Optional)" style="resize: none; height: 200px;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-center my-2">
+                        <div class="col">
+                            <input type="submit" value="RSVP" class="form-input btn btn-dark col-12" />
+                            <span asp-validation-for="FirstName" class="text-danger ms-1" style="font-size: 10px;"></span>
+                            <span asp-validation-for="LastName" class="text-danger ms-1" style="font-size: 10px;"></span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
